@@ -1,0 +1,249 @@
+.traditions-page {
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+.tradition-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+  text-align: center;
+}
+
+.tradition-hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.tradition-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.55), rgba(15, 15, 20, 0.85));
+}
+
+.tradition-scenario-back {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  z-index: 3;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.tradition-scenario-back:hover {
+  background: rgba(230, 184, 0, 0.25);
+  border-color: var(--color-gold);
+  color: #fff;
+}
+
+.tradition-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem 1.5rem;
+  max-width: 800px;
+}
+
+.page-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  color: #fff;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+}
+
+.clear-filter {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s;
+}
+
+.clear-filter:hover {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: #000;
+}
+
+.tradition-filters-row {
+  max-width: 1200px;
+  margin: 1.5rem auto 0;
+  padding: 0 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.tradition-filter-pill {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: var(--color-bg-card);
+  color: var(--color-text-main);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.tradition-filter-pill:hover {
+  border-color: rgba(230, 184, 0, 0.45);
+}
+
+.tradition-filter-pill--active {
+  background: #1a1a1a;
+  color: #fff;
+  border-color: #1a1a1a;
+}
+
+[data-theme='light'] .tradition-filter-pill--active {
+  background: #1e293b;
+  color: #fff;
+  border-color: #1e293b;
+}
+
+/* Grid */
+.traditions-grid-container {
+  max-width: 1200px;
+  margin: 1.75rem auto 0;
+  position: relative;
+  z-index: 10;
+  padding: 0 1.25rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+.tradition-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.tradition-card {
+  position: relative;
+  background: var(--color-bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1rem 1.35rem;
+  text-align: left;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.tradition-card__accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--tc-accent, var(--color-gold));
+}
+
+.tradition-card__letter {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.65rem;
+  font-family: var(--font-heading);
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--tc-accent, var(--color-gold));
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.tradition-card__tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  margin-bottom: 0.5rem;
+  align-self: flex-start;
+}
+
+.tradition-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  margin-bottom: 0.45rem;
+  color: var(--color-text-main);
+  position: relative;
+  z-index: 1;
+}
+
+.tradition-card__excerpt {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+[data-theme='light'] .tradition-card {
+  background: #fff;
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+/* No Results */
+.no-traditions {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem;
+  color: var(--color-text-muted);
+}
+
+.reset-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--color-gold);
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+  
+  .traditions-grid-container {
+    margin-top: -2rem;
+    padding: 0 1rem;
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,206 @@
+.consultant-page {
+    min-height: 100vh;
+    padding-bottom: 4rem;
+}
+
+.consultant-hero {
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    color: #fff;
+}
+
+.consultant-hero-inner h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    color: #fff;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
+}
+
+.consultant-hero-inner p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.92);
+    max-width: 28rem;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.consultant-benefits {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 1.25rem 2rem;
+}
+
+.consultant-benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 900px) {
+    .consultant-benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.consultant-benefit-card {
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+}
+
+.consultant-benefit-icon {
+    color: var(--color-gold);
+    margin-bottom: 0.75rem;
+}
+
+.consultant-benefit-card h3 {
+    font-size: 1.1rem;
+    color: var(--color-text-main);
+    margin-bottom: 0.5rem;
+}
+
+.consultant-benefit-card p {
+    font-size: 0.92rem;
+    color: var(--color-text-muted);
+    line-height: 1.45;
+    margin: 0;
+}
+
+.consultant-form-section {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.consultant-success {
+    padding: 3rem 2rem;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+}
+
+.consultant-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.consultant-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.consultant-text p {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+}
+
+.consultant-features {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature-icon {
+    color: var(--color-gold);
+}
+
+.consultant-form-card {
+    background: var(--color-bg-card);
+    padding: 2rem;
+    border-radius: 24px;
+    border: 1px solid var(--color-gold);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.consultant-form-card h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--color-gold);
+    font-size: 1.35rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-text-main);
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--color-gold);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-gold);
+    color: #1a1a1a;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+}
+
+@media (max-width: 968px) {
+    .consultant-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .consultant-text h1 {
+        font-size: 2.5rem;
+    }
+}

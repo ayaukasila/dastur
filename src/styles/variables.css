@@ -1,0 +1,91 @@
+/* Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+@font-face {
+  font-family: 'KZ Taurus';
+  src: url('/fonts/KZ_Taurus.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* --- Palette: The Nomad Soul --- */
+  
+  /* Primary: The Endless Sky */
+  --color-primary: #00A896; /* Rich Turquoise */
+  --color-primary-light: #4FD1C5;
+  --color-primary-dark: #00796B;
+  
+  /* Secondary: Golden Sun & Ornaments */
+  --color-gold: #E6B800; /* Rich Gold */
+  --color-gold-light: #FAD02E;
+  --color-gold-shiny: #FFF3B0; /* Highlight */
+  
+  /* Neutral / Backgrounds */
+  --color-bg-dark: #0F172A; /* Midnight Steppe */
+  --color-bg-card: rgba(30, 41, 59, 0.7); /* Glass Dark */
+  --color-text-main: #F8FAFC;
+  --color-text-muted: #94A3B8;
+  
+  /* Accents */
+  --color-accent-red: #D32F2F; /* Traditional Felt Pattern Red */
+  
+  /* --- Typography --- */
+  --font-heading: 'KZ Taurus', 'Inter', sans-serif;
+  --font-subheading: 'KZ Taurus', 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  
+  /* --- Spacing --- */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+  
+  /* --- Effects --- */
+  --shadow-gold: 0 4px 20px rgba(230, 184, 0, 0.3);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.18);
+  --backdrop-blur: blur(12px);
+  
+  /* --- Semantic Gradients (Default Dark) --- */
+  --bg-gradient-body: linear-gradient(to bottom, #0F172A, #020617);
+  --bg-gradient-card: linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
+  --bg-header: linear-gradient(45deg, var(--color-primary-dark), #0F172A); /* Default Dark Header */
+  --bg-footer: #0F172A;
+  --color-text-footer: #94A3B8; /* Slate for dark mode */
+  --bg-overlay: rgba(0, 0, 0, 0.6);
+
+  /* --- Animations --- */
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light Theme Variables (Luxury Gold) */
+[data-theme='light'] {
+  --color-primary: #0F5132; /* Deep Emerald for contrast */
+  --color-primary-light: #198754;
+  
+  /* Clean Luxury Palette */
+  --color-bg-dark: #FFFFFF; /* Pure White */
+  --color-bg-card: #FFFFFF;
+  --color-text-main: #1A1A1A; /* Sharp Black */
+  --color-text-muted: #595959; /* Neutral Grey */
+  --color-gold: #D4AF37; /* Metallic Gold */
+  --color-gold-shiny: #F5C542; 
+
+  /* Premium Gradients */
+  --bg-gradient-body: linear-gradient(180deg, #FFFFFF 0%, #FAFAFA 100%); /* Clean White */
+  --bg-gradient-card: linear-gradient(145deg, #FFFFFF, #F5F5F7); /* Apple-like subtle grey fade */
+  --bg-header: #10403B; /* Exact match to footer */
+  --bg-footer: #10403B; /* Deep Steppe Emerald (Noble Green) */
+  --color-text-footer: #F0FDF9; /* Mint White for contrast on green */
+  --bg-overlay: rgba(255, 255, 255, 0.9);
+  
+  --shadow-gold: 0 4px 25px rgba(212, 175, 55, 0.25); /* Gold Glow */
+  --shadow-glass: 0 15px 40px rgba(0, 0, 0, 0.08); /* Clean crisp shadow */
+  --glass-border: 1px solid rgba(0, 0, 0, 0.06);
+}
+

@@ -1,0 +1,154 @@
+
+.consultant-widget {
+  position: fixed;
+  bottom: 30px; /* Switch to PX for stability */
+  right: 30px;  /* Switch to PX for stability */
+  width: 60px;  /* Force fixed size */
+  height: 60px; /* Force fixed size */
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center content strictly */
+  /* Prevent jitter/repaint shifts */
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+  will-change: transform; 
+}
+
+.consultant-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  color: #1a1a1a;
+  border: 1px solid transparent; /* Fix: Reserve space for border to prevent jump */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  /* transition: all 0.3s ease;  <-- REMOVED: Conflicts with Framer Motion */
+  position: relative;
+}
+
+.consultant-btn:hover {
+  /* transform: scale(1.1); <-- REMOVED: Handled by Framer Motion whileHover */
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+}
+
+.consultant-btn.active {
+  /* Removed transform: rotate(45deg) as user requested "should not move at all" */
+  transform: none; 
+  background: var(--color-bg-card);
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border);
+  /* Add shadow to active state too, to prevent "shadow pop" causing jerkiness perception */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.consultant-chat-window {
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  width: 320px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transform-origin: bottom right;
+}
+
+.chat-header {
+  padding: 1rem;
+  background: rgba(255, 215, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.consultant-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.chat-header-info h4 {
+    margin: 0;
+    font-family: var(--font-heading);
+    color: var(--color-gold);
+}
+
+.chat-header-info p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+}
+
+.chat-body {
+    padding: 1rem;
+    height: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.message {
+    padding: 0.8rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    max-width: 80%;
+}
+
+.message.bot {
+    background: rgba(255, 255, 255, 0.05);
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+}
+
+.message.user {
+    background: var(--color-gold);
+    color: #1a1a1a;
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+
+.chat-footer {
+    padding: 0.8rem;
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.chat-input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    color: var(--color-text-main);
+    outline: none;
+}
+
+.send-btn {
+    background: none;
+    border: none;
+    color: var(--color-gold);
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .consultant-widget {
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
